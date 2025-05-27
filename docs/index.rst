@@ -4,9 +4,11 @@
 Welcome to My Project's documentation!
 ======================================
 
+Some new text.
+
 .. toctree::
    :maxdepth: 2
-   :caption: Spis treści:
+   :caption: table of contents:
 
    getting_started
 
