@@ -30,3 +30,5 @@ Then open ``_build/html/index.html`` in your browser.
 
 Get out of here, Stalker
 ------------------------
+
+Hello Docker!
