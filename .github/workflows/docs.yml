@@ -1,7 +1,5 @@
 name: Build and Deploy Docs
-on:
-  push:
-    branches: [main]
+on: push
 
 concurrency:
   group: "pages"
@@ -23,6 +21,7 @@ jobs:
           path: build/html
 
   deploy:
+    if: github.ref_name == 'master'
     needs: build
     permissions:
       contents: read
