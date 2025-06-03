@@ -21,7 +21,7 @@ jobs:
           path: build/html
 
   deploy:
-    if: github.ref_name == 'master'
+    if: github.ref_name == 'main'
     needs: build
     permissions:
       contents: read
