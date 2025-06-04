@@ -2,7 +2,7 @@ name: Build and Deploy Docs
 on: push
 
 concurrency:
-  group: "pages"
+  group: "pages-${{ github.ref }}"
   cancel-in-progress: true
 
 jobs:
@@ -21,7 +21,7 @@ jobs:
           path: build/html
 
   deploy:
-    if: github.ref_name == 'main'
+    if: github.ref == 'refs/heads/main'
     needs: build
     permissions:
       contents: read
